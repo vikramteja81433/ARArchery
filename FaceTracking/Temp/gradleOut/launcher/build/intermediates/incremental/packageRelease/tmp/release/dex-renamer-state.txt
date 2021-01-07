@@ -1,0 +1,4 @@
+#Thu Jan 07 12:18:23 IST 2021
+base.0=C\:\\Users\\Vikram teja\\Desktop\\GitRepos\\ARArchery\\FaceTracking\\Temp\\gradleOut\\launcher\\build\\intermediates\\dex\\release\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

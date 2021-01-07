@@ -16,8 +16,7 @@ public class CollisionDetection : MonoBehaviour
     {
      //   pointer = GameObject.Find("Pointer");
       rb = gameObject.GetComponent<Rigidbody>();
-       debug = GameObject.Find("Debug").GetComponent<Text>();
-        
+       debug = GameObject.Find("Debug").GetComponent<Text>();    
         offset = new Vector3(0, 0, 0.02f);
         ps1 = GameObject.Find("BloodSpray");
         ps = ps1.GetComponentsInChildren<ParticleSystem>();
