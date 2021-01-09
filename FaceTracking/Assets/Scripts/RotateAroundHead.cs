@@ -5,12 +5,14 @@ using UnityEngine.XR.ARFoundation;
 
 public class RotateAroundHead : MonoBehaviour
 {
-    public GameObject Apple4;
+    public GameObject Apple;
+    private GameObject Face;
 
     private float centrex, centrey, x, y,angle = 0;
     // Start is called before the first frame update
     void Start()
     {
+        Face = GameObject.FindGameObjectWithTag("Face");
         CalculateCentre();
     }
 
@@ -19,16 +21,16 @@ public class RotateAroundHead : MonoBehaviour
     {
         CalculateCentre();
         if (angle > 210f && angle < 330f)
-            {
-             Apple4.SetActive(false);
-            }
+        {
+             Apple.SetActive(false);
+        }
         else
         {
-           Apple4.SetActive(true);
+           Apple.SetActive(true);
         }
         x = centrex + 0.12f * Mathf.Cos(Mathf.Deg2Rad*angle);
         y = centrey - 0.12f * Mathf.Sin(Mathf.Deg2Rad*angle);
-        Apple4.transform.position = new Vector3(x,transform.position.y,y);
+        Apple.transform.localPosition = new Vector3(x,Apple.transform.localPosition.y,y);
         angle += 1.25f;
         if(angle == 360f)
         {
@@ -37,8 +39,9 @@ public class RotateAroundHead : MonoBehaviour
     }
     public void CalculateCentre()
     {
-        centrex = transform.position.x;
-        centrey = transform.position.z;
+        
+        centrex = Face.transform.position.x;
+        centrey = Face.transform.position.z;
     }
    
 }
