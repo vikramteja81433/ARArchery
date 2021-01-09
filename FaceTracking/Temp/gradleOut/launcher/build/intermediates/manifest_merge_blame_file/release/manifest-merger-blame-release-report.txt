@@ -146,7 +146,7 @@
 81-->[:unityLibrary] C:\Users\Vikram teja\Desktop\GitRepos\ARArchery\FaceTracking\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:65:9-67:68
 82            android:name="unity.build-id"
 82-->[:unityLibrary] C:\Users\Vikram teja\Desktop\GitRepos\ARArchery\FaceTracking\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:66:13-42
-83            android:value="e8498c09-ad3d-499a-bba0-a1cecd00f941" />
+83            android:value="bc745d15-3b6c-4b11-b863-9924442fee92" />
 83-->[:unityLibrary] C:\Users\Vikram teja\Desktop\GitRepos\ARArchery\FaceTracking\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:67:13-65
 84        <meta-data
 84-->[:unityLibrary] C:\Users\Vikram teja\Desktop\GitRepos\ARArchery\FaceTracking\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:68:9-70:36

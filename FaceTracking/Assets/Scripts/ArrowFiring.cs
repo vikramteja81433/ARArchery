@@ -9,13 +9,12 @@ using System;
 public class ArrowFiring : MonoBehaviour
 {
     public GameObject ArrowPosition;
-    ARRaycastManager rayManager;
-    ARAnchorManager anchorManager;
     public GameObject arrow,cam,session;
     private GameObject temparrow;
     private ARFaceManager faceManager;
     public Text Debug;
     private ARFace face;
+    private ARFace tmpface;
     private Vector3 dir;
     int i = 0;
  
@@ -34,11 +33,12 @@ public class ArrowFiring : MonoBehaviour
     void Start()
     {       
        // pointer = GameObject.Find("Pointer");
-        rayManager = session.GetComponent<ARRaycastManager>();
-        anchorManager = session.GetComponent<ARAnchorManager>();
+   //     rayManager = session.GetComponent<ARRaycastManager>();
+    //    anchorManager = session.GetComponent<ARAnchorManager>();
         offset = new Vector3(0, 0, 0.04f);
       
     }
+
     private void OnEnable()
     {
         faceManager = session.GetComponent<ARFaceManager>();
@@ -48,34 +48,42 @@ public class ArrowFiring : MonoBehaviour
     {
         faceManager.facesChanged -= OnFaceUpdated;
     }
+    public void OnFaceUpdated(ARFacesChangedEventArgs args)
+    {
+        face = args.added[0];
 
+    }
     // Update is called once per frame
     void Update()
     {
 
          ShowPointer();
+        if(Input.touchCount >0 && Input.touches[0].phase == TouchPhase.Began)
+        {
+            AudioManager.instance.PlayArrowReleaseSound();
+            GameManager.instance.arrowCount -= 1;
+            isArrowShot = true;
+            pointer.SetActive(false);
+            StartCoroutine(ShowPointerAgain());
+        }
      
    
     }
     public void OnFireButtonClicked()
     {
         AudioManager.instance.PlayArrowReleaseSound();
-       
+        GameManager.instance.arrowCount -= 1;
         isArrowShot = true;
         pointer.SetActive(false);
         StartCoroutine(ShowPointerAgain());
     }
-    public void OnFaceUpdated(ARFacesChangedEventArgs args)
-    {
-        face = args.added[0];
     
-    }
     public void FixedUpdate()
     {
         if (isArrowShot)
         {
            GameObject temparrow = Instantiate(arrow, ArrowPosition.transform.position, ArrowPosition.transform.rotation);
-            temparrow.transform.parent = face.transform;
+            temparrow.transform.parent = GameManager.instance.tmpface.transform;
             temparrow.GetComponent<Rigidbody>().AddForce(arrow.transform.up * 100);
             isArrowShot = false;
            
@@ -99,7 +107,7 @@ public class ArrowFiring : MonoBehaviour
     }
     public IEnumerator ShowPointerAgain()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         pointer.SetActive(true);
     }
 }

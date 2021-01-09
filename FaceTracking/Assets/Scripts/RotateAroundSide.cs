@@ -18,16 +18,16 @@ public class RotateAroundSide : MonoBehaviour
     {
         centrex = transform.localPosition.x;
         centrey = transform.localPosition.y;
-        x = centrex - 0.25f * Mathf.Cos(Mathf.Deg2Rad * angle);
-        y = centrey + 0.25f * Mathf.Sin(Mathf.Deg2Rad * angle);
+        x = centrex - 0.2f * Mathf.Cos(Mathf.Deg2Rad * angle);
+        y = centrey + 0.2f * Mathf.Sin(Mathf.Deg2Rad * angle);
         Apple6.transform.localPosition = new Vector3(x, y, 0);
         if (clockwise)
         {
-            angle += 1.25f;
+            angle += 1.2f;
         }
         if(!clockwise)
         {
-            angle -= 1.25f;
+            angle -= 1.2f;
         }
         if (angle == 180)
         {

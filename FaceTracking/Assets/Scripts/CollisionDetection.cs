@@ -30,16 +30,18 @@ public class CollisionDetection : MonoBehaviour
         AudioManager.instance.PlayArrowImpactSound();
         ps1.transform.position = collision.GetContact(0).point;
         gameObject.transform.parent = collision.gameObject.transform;
-        if (collision.gameObject.tag == "Fruit")
+            if (collision.gameObject.tag == "Fruit")
             {
-
-                debug.text = "You hit Apple";
+              
+               GameManager.instance.appleCount--;
+               Destroy(collision.gameObject);
+               Destroy(gameObject);
             }
             else if (collision.gameObject.tag == "Face")
             {
                 ps[0].Play();
                 ps[1].Play();
-               debug.text = "It's my face Motherfucker";
+              
             }
         
     }
