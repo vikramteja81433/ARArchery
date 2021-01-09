@@ -9,8 +9,7 @@ public class LevelManager : MonoBehaviour
     public GameObject[] level = new GameObject[10];
     [HideInInspector] public static LevelManager instance;
     public GameObject Face;
-    public int currentlevel;
-    private ARAnchorManager anchorManager;
+    [HideInInspector] public int currentlevel;
     [HideInInspector] public Vector3 levelpos;
     [HideInInspector] public Quaternion levelrot;
     [HideInInspector] public GameObject tempobj;
@@ -48,9 +47,5 @@ public class LevelManager : MonoBehaviour
     {
         currentlevel = 0;
     }
-    public void Start()
-    {
-        anchorManager = FindObjectOfType<ARAnchorManager>();
-       
-    }
+   
 }

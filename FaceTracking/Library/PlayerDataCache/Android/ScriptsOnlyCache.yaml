@@ -27,7 +27,6 @@ ScriptsOnlyBuild:
     - UnityEngine.XR.ARFoundation.ARFace
     - UnityEngine.XR.ARFoundation.ARFaceManager
     - UnityEngine.XR.ARFoundation.ARFaceMeshVisualizer
-    - UnityEngine.XR.ARFoundation.ARInputManager
     - UnityEngine.XR.ARFoundation.ARPoseDriver
     - UnityEngine.XR.ARFoundation.ARRaycastManager
     - UnityEngine.XR.ARFoundation.ARSession
@@ -45,10 +44,8 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
-    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
-    - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
@@ -76,8 +73,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
     - Class: 82
       Script: {instanceID: 0}
     - Class: 83
@@ -99,8 +94,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12058}
     - Class: 114
-      Script: {instanceID: 12080}
-    - Class: 114
       Script: {instanceID: 12100}
     - Class: 114
       Script: {instanceID: 12130}
@@ -116,8 +109,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12978}
     - Class: 114
       Script: {instanceID: 13066}
-    - Class: 114
-      Script: {instanceID: 13260}
     - Class: 114
       Script: {instanceID: 13384}
     - Class: 114
@@ -143,8 +134,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13956}
     - Class: 114
-      Script: {instanceID: 14152}
-    - Class: 114
       Script: {instanceID: 14234}
     - Class: 114
       Script: {instanceID: 14236}
@@ -165,8 +154,6 @@ ScriptsOnlyBuild:
     - Class: 198
       Script: {instanceID: 0}
     - Class: 199
-      Script: {instanceID: 0}
-    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -227,7 +214,7 @@ ScriptsOnlyBuild:
     className: PlayerQuitHandler
   - hash:
       serializedVersion: 2
-      Hash: c6104cc50441cfadb2548cbfa8bac547
+      Hash: e2c7e9702ae8b122219fb3ceb5455e87
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -951,6 +938,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: be8d4df5ba8d711888bd7c1092dc0c30
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Testing
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

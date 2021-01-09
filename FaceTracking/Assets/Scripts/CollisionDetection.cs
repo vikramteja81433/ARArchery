@@ -32,21 +32,27 @@ public class CollisionDetection : MonoBehaviour
         gameObject.transform.parent = collision.gameObject.transform;
             if (collision.gameObject.tag == "Fruit")
             {
-              
-               GameManager.instance.appleCount--;
-               Destroy(collision.gameObject);
-               Destroy(gameObject);
+                if(collision.gameObject.name == "Apple1")
+                {
+                GameManager.instance.isApple1 = false;
+                }
+                if (collision.gameObject.name == "Apple2")
+                {
+                GameManager.instance.isApple1 = false;
+                }
+               if (collision.gameObject.name == "Apple3")
+                {
+                GameManager.instance.isApple1 = false;
+                }
+                GameManager.instance.appleCount--;
+                Destroy(collision.gameObject);
+                Destroy(gameObject);
             }
             else if (collision.gameObject.tag == "Face")
             {
                 ps[0].Play();
                 ps[1].Play();
               
-            }
-        
-    }
-    public void OnDestroy()
-    {
-    
+            }     
     }
 }

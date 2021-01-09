@@ -117,7 +117,7 @@
 65-->C:\Users\Vikram teja\Desktop\GitRepos\ARArchery\FaceTracking\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:17:5-101
 66            android:name="unity.build-id"
 66-->C:\Users\Vikram teja\Desktop\GitRepos\ARArchery\FaceTracking\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:17:16-45
-67            android:value="bc745d15-3b6c-4b11-b863-9924442fee92" />
+67            android:value="af9d3d4d-986d-4f45-88fe-b46017c012ad" />
 67-->C:\Users\Vikram teja\Desktop\GitRepos\ARArchery\FaceTracking\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:17:46-98
 68        <meta-data
 68-->C:\Users\Vikram teja\Desktop\GitRepos\ARArchery\FaceTracking\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:18:5-88
